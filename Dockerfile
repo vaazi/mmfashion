@@ -16,6 +16,9 @@ RUN conda install -y pytorch torchvision cpuonly -c pytorch
 # Install mmcv
 RUN pip install mmcv==2.0.0 -f https://download.openmmlab.com/mmcv/dist/cpu/torch2.0/index.html
 
+# Install opencv-python-headless intended for headless envts like Docker
+RUN pip install opencv-python-headless --default-timeout=100
+
 # Install mmfashion
 COPY . /mmfashion
 WORKDIR /mmfashion

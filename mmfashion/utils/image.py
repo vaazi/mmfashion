@@ -13,7 +13,7 @@ def get_img_tensor(img_path, use_cuda, get_size=False):
     original_w, original_h = img.size
 
     img_size = (224, 224)  # crop image to (224, 224)
-    img.thumbnail(img_size, Image.ANTIALIAS)
+    img.thumbnail(img_size, Image.Resampling.LANCZOS)
     img = img.convert('RGB')
     normalize = transforms.Normalize(
         mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
