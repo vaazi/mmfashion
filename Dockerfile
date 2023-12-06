@@ -25,3 +25,5 @@ WORKDIR /mmfashion
 ENV FORCE_CUDA="0"
 RUN pip install -r requirements.txt --default-timeout=100
 RUN pip install --no-cache-dir -e .
+EXPOSE 5000
+ENTRYPOINT [ "python", "-m", "flask", "--app", "api/run", "run", "--host=0.0.0.0" ]

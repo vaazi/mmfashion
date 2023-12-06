@@ -2,8 +2,8 @@ from __future__ import division
 import argparse
 
 import torch
-from mmcv import Config
-from mmcv.runner import load_checkpoint
+from mmengine.config import Config
+from mmengine.runner import load_checkpoint
 
 from mmfashion.core import AttrPredictor, CatePredictor
 from mmfashion.models import build_predictor
