@@ -2,8 +2,8 @@ from __future__ import division
 import argparse
 
 import torch
-from mmcv import Config
-from mmcv.runner import load_checkpoint
+from mmengine.config import Config
+from mmengine.runner import load_checkpoint
 
 from mmfashion.core import AttrPredictor
 from mmfashion.models import build_predictor
@@ -28,7 +28,7 @@ def parse_args():
         help='test config file path',
         default='configs/attribute_predict/global_predictor_vgg_attr.py')
     parser.add_argument(
-        '--use_cuda', type=bool, default=True, help='use gpu or not')
+        '--use_cuda', type=bool, default=False, help='use gpu or not')
     args = parser.parse_args()
     return args
 

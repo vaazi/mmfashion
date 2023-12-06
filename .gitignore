@@ -1,5 +1,7 @@
 # Generated files
 .idea/
+.vscode
+.DS_Store
 
 # Temp Files
 *~
@@ -14,7 +16,6 @@ data/In-shop
 data/Landmark_Detect
 data/Consumer_to_shop
 data/DeepFashion
-data/Attr_Predict
 data/Consumer-to-shop\ Clothes\ Retrieval\ Benchmark/
 data/*.png
 data/VTON
@@ -28,7 +29,6 @@ extracted_features/
 # *.jpeg
 *.pth
 *.pth.tar
-*.txt
 *.zip
 *.swo
 *.swp

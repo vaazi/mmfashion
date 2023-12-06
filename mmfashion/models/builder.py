@@ -1,4 +1,4 @@
-import mmcv
+from mmengine import utils
 from torch import nn
 
 from .registry import (ATTRPREDICTOR, BACKBONES, CATEPREDICTOR, CONCATS,
@@ -16,7 +16,7 @@ def _build_module(cfg, registry, default_args):
     assert isinstance(default_args, dict) or default_args is None
     args = cfg.copy()
     obj_type = args.pop('type')
-    if mmcv.is_str(obj_type):
+    if utils.is_str(obj_type):
         if obj_type not in registry.module_dict:
             raise KeyError('{} is not in the {} registry'.format(
                 obj_type, registry.name))
